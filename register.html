@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js"></script>
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-3">Profiler</h1>
+            <hr class="my-2">
+            <p class="lead">
+                Create Your Profile
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <form name="myForm">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <fieldset>
+                    <legend>Name</legend>
+                    <div class="form-group">
+                        <label for="fname"></label>
+                        <input type="text" name="fname" id="fname" class="form-control" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname"></label>
+                        <input type="text" name="lname" id="lname" class="form-control" placeholder="Last Name">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Gender</legend>
+                    <div class="form-check">
+                        <label class="form-check-label gender">
+                    <input type="radio" class="form-check-input" name="gender" id="male" value="male" checked>
+                    Male
+                    </label>
+                        <label class="form-check-label gender">
+                    <input type="radio" class="form-check-input" name="gender" id="female" value="female">
+                    Female
+                    </label>
+                        <label class="form-check-label gender">
+                    <input type="radio" class="form-check-input" name="gender" id="others" value="others">
+                    Others
+                    </label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Email</legend>
+                    <div class="form-group">
+                        <label for="email"></label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Mail Id" aria-describedby="emailHelpId" pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+[.][a-zA-Z0-9]+" required>
+                        <small id="emailHelpId" class="form-text text-muted">abc@xyz.com</small>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Password</legend>
+                    <div class="form-group">
+                        <label for="pass"></label>
+                        <input type="password" class="form-control" name="pass" id="pass" placeholder="Password" minlength="8" maxlength="16" pattern="[a-zA-Z0-9._=-@]+" aria-describedby="passId" required>
+                        <small id="passId" class="form-text text-muted">Alphanumeric & length (minimum 8 & maximum 16)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="cpass"></label>
+                        <input type="password" class="form-control" name="cpass" id="cpass" placeholder="Confirm Password" pattern="[a-zA-Z0-9._=-@]+" minlength="8" maxlength="16" required>
+                    </div>
+                    <div class="form-group">
+                        <span id="status"></span>
+                    </div>
+                </fieldset>
+                <button type="reset" class="btn btn-primary" id="btnres">Reset</button>
+                <button type="submit" class="btn btn-primary" id="btnreg" onclick="return submitData()">Register</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>

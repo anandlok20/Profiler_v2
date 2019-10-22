@@ -1,0 +1,52 @@
+/* body {
+    background-color: grey;
+} */
+
+.jumbotron {
+    margin: 10px;
+    background-color: lavender;
+    border-radius: 200px;
+}
+
+#ibtn {
+    float: right;
+    margin: 10px;
+    padding: 5px 10px;
+}
+
+#forgetPwd {
+    float: left;
+}
+
+#regButton {
+    color: black;
+}
+
+fieldset {
+    border: 2px solid;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.gender {
+    margin: 10px;
+    padding: 5px;
+}
+
+#btnres {
+    float: left;
+    width: 200px;
+    margin: 20px 100px;
+    padding: 5px 20px;
+}
+
+#btnreg {
+    float: right;
+    width: 200px;
+    margin: 20px 100px;
+    padding: 5px 20px;
+}
+
+#status {
+    color: red;
+}
