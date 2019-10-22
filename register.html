@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class="container">
-        <form name="myForm">
+        <form name="myForm" method="POST">
             <fieldset>
                 <legend>Personal Information</legend>
                 <fieldset>
@@ -68,12 +68,12 @@
                     <legend>Password</legend>
                     <div class="form-group">
                         <label for="pass"></label>
-                        <input type="password" class="form-control" name="pass" id="pass" placeholder="Password" minlength="8" maxlength="16" pattern="[a-zA-Z0-9._=-@]+" aria-describedby="passId" required>
-                        <small id="passId" class="form-text text-muted">Alphanumeric & length (minimum 8 & maximum 16)</small>
+                        <input type="password" class="form-control" name="pass" id="pass" placeholder="Password" minlength="5" maxlength="16" pattern="[a-zA-Z0-9._=-@]+" aria-describedby="passId" required>
+                        <small id="passId" class="form-text text-muted">Alphanumeric & length (minimum 5 & maximum 16)</small>
                     </div>
                     <div class="form-group">
                         <label for="cpass"></label>
-                        <input type="password" class="form-control" name="cpass" id="cpass" placeholder="Confirm Password" pattern="[a-zA-Z0-9._=-@]+" minlength="8" maxlength="16" required>
+                        <input type="password" class="form-control" name="cpass" id="cpass" placeholder="Confirm Password" pattern="[a-zA-Z0-9._=-@]+" minlength="5" maxlength="16" required>
                     </div>
                     <div class="form-group">
                         <span id="status"></span>
