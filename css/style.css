@@ -35,18 +35,29 @@ fieldset {
 
 #btnres {
     float: left;
-    width: 200px;
-    margin: 20px 100px;
+    width: 180px;
+    margin: 20px 60px;
     padding: 5px 20px;
 }
 
 #btnreg {
     float: right;
-    width: 200px;
-    margin: 20px 100px;
+    width: 180px;
+    margin: 20px 60px;
+    padding: 5px 20px;
+}
+
+#btnrer {
+    float: left;
+    width: 180px;
+    margin: 20px 140px;
     padding: 5px 20px;
 }
 
 #status {
     color: red;
+}
+
+a {
+    color: inherit;
 }
