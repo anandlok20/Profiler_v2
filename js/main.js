@@ -49,3 +49,8 @@ function validateEmailDuplicate() {
         return true;
     }
 }
+
+
+function resetForm() {
+    document.getElementById("status").innerHTML = "";
+}
