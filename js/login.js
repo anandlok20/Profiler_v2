@@ -19,11 +19,11 @@ function loginVerify() {
             statusHide();
         } else {
             // window.alert("Login Sucess!!");
-            sessionStorage.setItem("session@" + vemail, vemail);
+            localStorage.setItem("session@" + vemail, vemail);
             obj.status = "1";
-            window.alert(obj.status);
+            // window.alert(obj.status);
             localStorage.setItem(vemail, JSON.stringify(obj));
-            window.location.href = "./home.html";
+            window.location.replace("./home.html?email=" + vemail);
         }
     }
 }

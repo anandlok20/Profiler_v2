@@ -1,9 +1,10 @@
 function resetForm() {
     document.getElementById("status").innerHTML = "";
+    document.getElementById("passDisplay").hidden = true;
 }
 
 function nextData() {
-    debugger;
+    // debugger;
     var femail = document.getElementById("email").value;
     var fmobile = document.getElementById("mobile").value;
     var data = localStorage.getItem(femail);
@@ -26,20 +27,34 @@ function nextData() {
 }
 
 function checkPassEqual() {
-    if (document.getElementById("npass").value == "") {
+    if (document.getElementById("npass").value == "" || document.getElementById("ncpass").value == "") {
+        statusShow()
         document.getElementById("status").innerHTML = "Please enter new password!!";
+        statusHide()
     } else {
         if (document.getElementById("npass").value != document.getElementById("ncpass").value) {
+            statusShow()
             document.getElementById("status").innerHTML = "Password and Confirm Password are different!!";
+            statusHide()
             return false;
         } else {
-            return resetPwd();
+            resetPwd();
         }
     }
 }
 
 function resetPwd() {
-    window.alert("Hello");
+    // debugger;
+    var femail = document.getElementById("email").value;
+    var data = localStorage.getItem(femail);
+    var obj = JSON.parse(data);
+    var passChange = document.getElementById("npass").value;
+    // window.alert("pC:" + passChange);
+    obj.pass = passChange;
+    // window.alert("op:" + obj.pass);
+    localStorage.setItem(femail, JSON.stringify(obj));
+    // window.alert(hello);
+    window.location.href = "./index.html";
 }
 
 
