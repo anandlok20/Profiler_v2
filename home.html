@@ -10,11 +10,47 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/home.js"></script>
     <title>Welcome</title>
 </head>
 
 <body>
-    <p>Hello User</p>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-3">Profiler</h1>
+            <hr class="my-2">
+            <p class="lead">
+                <span id="logTitle">Welcome</span>
+                <button type="button" id="ibtn" class="btn btn-danger" onclick="deRegister()">Delete Profile</button>
+                <button type="button" id="ibtn" class="btn btn-primary" onclick="logout()">Logout</button>
+            </p>
+        </div>
+    </div>
+    <!-- <p>Hello User</p> -->
+    <div class="container">
+        <table class="table">
+            <caption>Active Users</caption>
+            <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td scope="row"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>
