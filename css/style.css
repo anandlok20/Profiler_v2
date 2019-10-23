@@ -54,6 +54,13 @@ fieldset {
     padding: 5px 20px;
 }
 
+#btnrec {
+    float: right;
+    width: 180px;
+    margin: 20px 60px;
+    padding: 5px 20px;
+}
+
 #status {
     color: red;
 }
