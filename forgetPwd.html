@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/forget.js"></script>
+    <title>Profiler</title>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-3">Profiler</h1>
+            <hr class="my-2">
+            <p class="lead">
+                Reset Your Password
+            </p>
+        </div>
+    </div>
+    <form>
+        <div class="container">
+            <fieldset>
+                <legend>Email & Contact</legend>
+                <fieldset>
+                    <legend>Email</legend>
+                    <div class="form-group">
+                        <label for="email"></label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Mail Id" aria-describedby="emailHelpId" pattern="[a-zA-Z0-9._]+@[a-zA-Z0-9]+[.][a-zA-Z0-9]+" required>
+                        <small id="emailHelpId" class="form-text text-muted">abc@xyz.com</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile"></label>
+                        <input type="text" class="form-control" name="mobile" id="mobile" placeholder="Mobile No" pattern="[0-9]+" minlength="10" maxlength="10" required>
+                    </div>
+                </fieldset>
+                <fieldset id="passDisplay" hidden>
+                    <legend>Password</legend>
+                    <div class="form-group">
+                        <label for="npass"></label>
+                        <input type="password" class="form-control" name="npass" id="npass" placeholder="New Password" minlength="5" maxlength="16" pattern="[a-zA-Z0-9._=-@]+" aria-describedby="passId" required>
+                        <small id="passId" class="form-text text-muted">Alphanumeric & length (minimum 5 & maximum 16)</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="ncpass"></label>
+                        <input type="password" class="form-control" name="ncpass" id="ncpass" placeholder="New Confirm Password" pattern="[a-zA-Z0-9._=-@]+" minlength="5" maxlength="16" required>
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    <span id="status"></span>
+                </div>
+
+                <button type="button" class="btn btn-primary" id="btnres"><a href="./index.html">Back</a></button>
+                <button type="reset" class="btn btn-primary" id="btnrer" onclick="resetForm()">Reset</button>
+                <button type="submit" class="btn btn-primary" id="btnreg" onclick=" return nextData()">Next</button>
+                <button type="submit" class="btn btn-primary" id="btnrec" onclick=" return checkPassEqual()" hidden>Change</button>
+            </fieldset>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -10,7 +10,7 @@ function loginVerify() {
     // console.log(obj.pass);
     if (data == null) {
         statusShow()
-        document.getElementById("status").innerHTML = "Incorrect Username!!";
+        document.getElementById("status").innerHTML = "Incorrect Email!!";
         statusHide();
     } else {
         if (obj.pass != vpass) {
@@ -20,9 +20,10 @@ function loginVerify() {
         } else {
             // window.alert("Login Sucess!!");
             sessionStorage.setItem("session@" + vemail, vemail);
-            // data.status = "1";
-            window.alert(data.status);
-            localStorage.setItem(vemail, data);
+            obj.status = "1";
+            window.alert(obj.status);
+            localStorage.setItem(vemail, JSON.stringify(obj));
+            window.location.href = "./home.html";
         }
     }
 }
