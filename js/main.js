@@ -1,6 +1,8 @@
 function submitData() {
     if (document.myForm.pass.value != document.myForm.cpass.value) {
+        statusShow();
         document.getElementById("status").innerHTML = "Password and Confirm Password are different!!";
+        statusHide();
         return false;
     } else {
         return storeDataLS();
@@ -11,7 +13,9 @@ function submitData() {
 function storeDataLS() {
     if (validateEmailDuplicate()) {
         if (document.myForm.pass.value == "" || (document.myForm.pass.value).length < 5 || document.myForm.mobile.value == "") {
+            statusShow();
             document.getElementById("status").innerHTML = "Please Fill the correct Details!!";
+            statusHide();
             return false;
         } else {
             var profile = {
@@ -35,10 +39,13 @@ function storeDataLS() {
                 test.push(document.myForm.email.value);
             }
             localStorage.setItem("profileArray", JSON.stringify(test));
+            window.location.replace("./index.html");
             return true;
         }
     } else {
+        statusShow();
         document.getElementById("status").innerHTML = "Please Fill the Required Details!!";
+        statusHide();
         return false;
     }
 }
@@ -49,7 +56,9 @@ function validateEmailDuplicate() {
     var checkEmail = document.myForm.email.value;
     if (Array.isArray(testEmail) && testEmail.length) {
         if (testEmail.includes(checkEmail)) {
+            statusShow();
             document.getElementById("status").innerHTML = "Email Already Registered!!";
+            statusHide();
             return false;
         } else {
             return true;
@@ -62,4 +71,12 @@ function validateEmailDuplicate() {
 
 function resetForm() {
     document.getElementById("status").innerHTML = "";
+}
+
+function statusHide() {
+    $("#status").delay(1000).fadeOut();
+}
+
+function statusShow() {
+    $("#status").fadeIn();
 }
