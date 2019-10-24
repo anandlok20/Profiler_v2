@@ -14,7 +14,7 @@
     <title>Welcome</title>
 </head>
 
-<body>
+<body id="bodyCheck" hidden>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-3">Profiler</h1>
@@ -28,8 +28,8 @@
     </div>
     <!-- <p>Hello User</p> -->
     <div class="container">
+        <caption>Active Users</caption>
         <table class="table">
-            <caption>Active Users</caption>
             <thead class="thead-dark">
                 <tr>
                     <th>#</th>
@@ -37,17 +37,12 @@
                     <th>Last Name</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
+            <tbody id="activeData">
+                <!-- <tr>
                     <td scope="row"></td>
                     <td></td>
                     <td></td>
-                </tr>
-                <tr>
-                    <td scope="row"></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
     </div>
