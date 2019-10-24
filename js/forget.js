@@ -1,7 +1,9 @@
+//reset form
 function resetForm() {
     document.getElementById("status").innerHTML = "";
     document.getElementById("passDisplay").hidden = true;
 }
+
 
 function nextData() {
     // debugger;
