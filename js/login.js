@@ -1,3 +1,5 @@
+//login validation
+
 function loginVerify() {
     // debugger;
     var vemail = document.getElementById("email").value;
@@ -9,25 +11,32 @@ function loginVerify() {
     var obj = JSON.parse(data);
     // console.log(obj.pass);
     if (data == null) {
-        statusShow()
+        statusShow();
         document.getElementById("status").innerHTML = "Incorrect Email!!";
         statusHide();
     } else {
         if (obj.pass != vpass) {
-            statusShow()
+            statusShow();
             document.getElementById("status").innerHTML = "Incorrect Password!!";
             statusHide();
         } else {
             // window.alert("Login Sucess!!");
-            localStorage.setItem("session@" + vemail, vemail);
+            sessionStorage.setItem("on", vemail);
             obj.status = "1";
             // window.alert(obj.status);
             localStorage.setItem(vemail, JSON.stringify(obj));
-            window.location.replace("./home.html?email=" + vemail);
+            window.location.replace("./home.html");
+            // return true;
+            // var xhttp = new XMLHttpRequest();
+            // var fd = new FormData();
+            // fd.append("email", vemail);
+            // xhttp.open("POST", "home.html");
+            // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            // xhttp.send(fd);
         }
     }
 }
-
+//show and hide status
 function statusHide() {
     $("#status").delay(1000).fadeOut();
 }
@@ -35,3 +44,9 @@ function statusHide() {
 function statusShow() {
     $("#status").fadeIn();
 }
+
+// window.onload = function() {
+//     if (sessionStorage.length != 0) {
+//         window.location.replace("./home.html");
+//     }
+// }

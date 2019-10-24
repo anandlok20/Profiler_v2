@@ -1,10 +1,10 @@
-/* body {
-    background-color: grey;
-} */
+body {
+    background-color: #C6D8D3;
+}
 
 .jumbotron {
     margin: 10px;
-    background-color: lavender;
+    background-color: #DCAB6B;
     border-radius: 200px;
 }
 
@@ -67,4 +67,11 @@ fieldset {
 
 a {
     color: inherit;
+}
+
+#dispLogo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 200%;
+    margin-left: 150px;
+    color: blue;
 }
